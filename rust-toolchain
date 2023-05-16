@@ -1,0 +1,5 @@
+# Use nightly channel to enable fast compiling
+
+[toolchain]
+channel = "nightly"
+components = [ "cargo", "rust-std", "rustc", "llvm-tools-preview" ]

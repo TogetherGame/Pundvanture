@@ -14,9 +14,37 @@ A 2D advanture RPG game but with... puns maybe? I don't know what am I doing, ju
 
 ## How to run?
 
-```
-cargo game
-```
+1. Install `LLD linker`, for fast compiling. (Optional)
+
+    - Ubuntu: sudo apt-get install lld
+
+    - Arch: sudo pacman -S lld
+
+    - Windows: Ensure you have the latest cargo-binutils
+
+        ```
+        cargo install -f cargo-binutils
+        ```
+
+    - MacOS: You can follow these [instructions](https://lld.llvm.org/MachO/index.html) to install lld manually or install llvm through brew which includes lld: 
+        
+        ```
+        brew install llvm
+        ```
+
+2. Run the game
+
+    - If `LLD linker` is installed.
+
+        ```
+        cargo game
+        ```
+
+    - Otherwise
+
+        ```
+        cargo run -p pundvanture
+        ```
 
 ## How to contribute?
 

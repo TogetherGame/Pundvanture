@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+    "pundvanture",
+    "pundvanture_data",
+    "assets_credit_parser",
+]
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+lto = "thin"
