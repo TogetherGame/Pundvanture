@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     "pundvanture",
     "pundvanture_data",
-    "assets_credit_parser",
+    "assets_loader",
 ]
 
 [profile.dev.package."*"]

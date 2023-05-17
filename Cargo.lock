@@ -198,8 +198,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "assets_credit_parser"
+name = "assets_loader"
 version = "0.1.0"
+dependencies = [
+ "bevy",
+ "serde",
+ "serde_json",
+]
 
 [[package]]
 name = "async-channel"
@@ -2453,6 +2458,7 @@ checksum = "332cd62e95873ea4f41f3dfd6bbbfc5b52aec892d7e8d534197c4720a0bbbab2"
 name = "pundvanture"
 version = "0.1.0"
 dependencies = [
+ "assets_loader",
  "bevy",
 ]
 

@@ -1,0 +1,40 @@
+{
+  "credits": [
+    {
+      "title": "Generic Character Asset v 0.2",
+      "type": "texture",
+      "url": "https://brullov.itch.io/generic-char-asset",
+      "authors": ["brullov"],
+      "info": "Animated pixel art character which will fit any fantasy/medieval side-scroller or platformer game.",
+      "licenses": [],
+      "license_info": "This asset pack can be used in free and commercial projects. Do not redistribute/resell it."
+    },
+    {
+      "title": "Unifont Font",
+      "type": "font",
+      "url": "https://www.fontspace.com/unifont-font-f26370",
+      "authors": ["St. GIGAFONT Typefaces"],
+      "info": "Just a quick, legit compilation of Fairfax and all 3 Unifont 9.0.0.6's. More to come.",
+      "licenses": ["GPL"],
+      "license_info": ""
+    },
+    {
+      "title": "Oak Woods — Environment Asset",
+      "type": "texture",
+      "url": "https://brullov.itch.io/oak-woods",
+      "authors": ["brullov"],
+      "info": "Oak Woods — side-scroller, platformer tileset pack which will fit any RPG, medieval, or fantasy game.",
+      "licenses": [],
+      "license_info": "This asset pack can be used in free and commercial projects. Do not redistribute/resell it."
+    },
+    {
+      "title": "Treasure Hunters",
+      "type": "texture",
+      "url": "https://pixelfrog-assets.itch.io/treasure-hunters",
+      "authors": ["Pixel Frog"],
+      "info": "This Asset Pack contains all you need for a Pirate Adventure (Player, Enemies, Traps, Objects, Items, Levels, UI)",
+      "licenses": ["CC0"],
+      "license_info": "These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. Attribution is not required."
+    }    
+  ]
+}
