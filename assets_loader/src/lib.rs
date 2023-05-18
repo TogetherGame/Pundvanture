@@ -1,30 +1,39 @@
 mod credit;
 mod json;
 
-use bevy::prelude::{AddAsset, App, Plugin};
+use std::marker::PhantomData;
+
+use bevy::{
+    asset::Asset,
+    prelude::{AddAsset, App, Plugin},
+};
 
 pub use credit::{AssetCredit, AssetType, Credits};
+use serde::Deserialize;
 
 #[non_exhaustive]
 enum Format {
     Json,
 }
 
-pub struct LoaderPlugin(Format);
+pub struct LoaderPlugin<T>(Format, PhantomData<T>);
 
-impl Plugin for LoaderPlugin
+impl<T> Plugin for LoaderPlugin<T>
+where
+    for<'de> T: Deserialize<'de> + Asset,
 {
     fn build(&self, app: &mut App) {
         match self.0 {
             Format::Json => {
-                app.add_asset_loader(json::JsonLoader);
+                app.add_asset::<T>()
+                    .add_asset_loader(json::JsonLoader::<T>(PhantomData));
             }
         }
     }
 }
 
-impl LoaderPlugin {
+impl<T> LoaderPlugin<T> {
     pub fn json() -> Self {
-        Self(Format::Json)
+        Self(Format::Json, PhantomData)
     }
 }

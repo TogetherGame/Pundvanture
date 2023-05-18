@@ -1,12 +1,16 @@
 //! Json file support for assets
 
-use bevy::asset::{AssetLoader, LoadContext, LoadedAsset};
+use std::marker::PhantomData;
+
+use bevy::asset::{Asset, AssetLoader, LoadContext, LoadedAsset};
 use bevy::utils::BoxedFuture;
-use serde_json::from_slice;
+use serde::Deserialize;
 
-pub(crate) struct JsonLoader;
+pub(crate) struct JsonLoader<T>(pub(crate) PhantomData<T>);
 
-impl AssetLoader for JsonLoader
+impl<T> AssetLoader for JsonLoader<T>
+where
+    for<'de> T: Deserialize<'de> + Asset,
 {
     fn load<'a>(
         &'a self,
@@ -14,7 +18,7 @@ impl AssetLoader for JsonLoader
         load_context: &'a mut LoadContext,
     ) -> BoxedFuture<'a, Result<(), bevy::asset::Error>> {
         Box::pin(async move {
-            let asset = from_slice(bytes)?;
+            let asset = serde_json::from_slice::<T>(bytes)?;
             load_context.set_default_asset(LoadedAsset::new(asset));
             Ok(())
         })
