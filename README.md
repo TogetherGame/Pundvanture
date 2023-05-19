@@ -1,6 +1,6 @@
-# Pundvanture (谐音大冒险)
+# Pundventure (谐音大冒险)
 
-A 2D advanture RPG game but with... puns maybe? I don't know what am I doing, just wanna create some fun project.
+A 2D adventure RPG game but with... puns maybe? I don't know what am I doing, just wanna create some fun project.
 
 一个有点弱智的 2D 风格冒险 RPG 游戏，但有很多谐音梗。。。
 
@@ -43,7 +43,7 @@ A 2D advanture RPG game but with... puns maybe? I don't know what am I doing, ju
     - Otherwise
 
         ```
-        cargo run -p pundvanture
+        cargo run -p pundventure
         ```
 
 ## How to contribute?

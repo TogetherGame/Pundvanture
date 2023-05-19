@@ -1,5 +1,5 @@
 [alias]
-game = "run -p pundvanture --features bevy/dynamic_linking"
+game = "run -p pundventure --features bevy/dynamic_linking"
 
 [target.x86_64-unknown-linux-gnu]
 linker = "clang"

@@ -6,7 +6,14 @@ pub(crate) enum GameState {
     Splash,
     Loading,
     MainMenu,
-    ShowCredits,
     Game,
     Paused,
+}
+
+#[derive(Debug, Default, Hash, PartialEq, Eq, Clone, States)]
+pub(crate) enum MainMenuState {
+    Show,
+    Credits,
+    #[default]
+    Hidden,
 }

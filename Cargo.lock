@@ -2455,7 +2455,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "332cd62e95873ea4f41f3dfd6bbbfc5b52aec892d7e8d534197c4720a0bbbab2"
 
 [[package]]
-name = "pundvanture"
+name = "pundventure"
 version = "0.1.0"
 dependencies = [
  "assets_loader",
@@ -2463,7 +2463,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "pundvanture_data"
+name = "pundventure_data"
 version = "0.1.0"
 
 [[package]]
